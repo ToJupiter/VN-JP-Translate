@@ -5,6 +5,7 @@
 2. [Bộ Dữ Liệu](#bo-du-lieu)
 3. [Báo Cáo](#bao-cao)
 4. [Mô Hình](#mo-hinh)
+5. [English README](https://github.com/ToJupiter/VN-JP-Translate/blob/main/README_EN.md)
 
 ---
 
