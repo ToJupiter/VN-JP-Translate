@@ -1,25 +1,48 @@
-## 🌟 Overview
+# VNJPTranslate: Hệ thống dịch Việt - Nhật, thiết kế cho dịch thuật quy mô lớn
 
-VNJPTranslate is a state-of-the-art machine translation system specifically designed for Vietnamese-Japanese language pairs. Our project offers:
+## 🌟 Mục Lục
+1. [Tổng Quan](#tong-quan)
+2. [Thành Tựu Chính](#thanh-tuu-chinh)
+3. [Bộ Dữ Liệu](#bo-du-lieu)
+4. [Báo Cáo](#bao-cao)
+5. [Mô Hình](#mo-hinh)
 
-- A high-quality parallel corpus with 3.3 million sentence pairs
-- Fine-tuned models using Quantized Low-Rank Adaptation (QLoRa) with Unsloth optimization
-- Comprehensive evaluation metrics and benchmarks
-- Ready-to-use inference pipelines
+---
 
-## 📊 Dataset
+## 🌟 Tổng Quan <a name="tong-quan"></a>
 
-Our dataset comprises 3.3 million parallel sentences with data from Japanese Wikipedia dataset and Japanese LLM dataset.
+VNJPTranslate là hệ thống gồm một bộ dataset Việt - Nhật với 3,3 triệu dòng (lớn nhất trong các dataset hiện có), có khả năng tự mở rộng về số lượng và chất lượng cùng với một mô hình nhỏ được fine-tune bằng LoRa để dịch thuật số lượng lớn giữa 2 ngôn ngữ Việt - Nhật. Chi phí tạo sinh và chạy mô hình được tối ưu (với các GPU nhỏ và miễn phí trên Colab và Kaggle).
 
+---
 
-- **Dataset link**: [VNJPTranslate Corpus on Hugging Face](https://huggingface.co/datasets/haiFrHust/VNJPTranslate)
+## 📊 Bộ Dữ Liệu <a name="bo-du-lieu"></a>
 
-## 📝 Report
+Bộ dữ liệu VNJPTranslate, bao gồm:
 
-For a detailed explanation of our methodology, results, and analysis, please refer to our paper:
+- **3,3 triệu cặp câu song ngữ**, được thu thập từ các nguồn uy tín như Wikipedia tiếng Nhật và tập dữ liệu LLM tiếng Nhật.
 
-- **Report**: [VNJPTranslate: A Comprehensive Pipeline for Vietnamese-Japanese Neural Machine Translation](./VNJPReport.pdf)
+- **Tải bộ dữ liệu trên HuggingFace**: [VNJPTranslate Corpus trên Hugging Face](https://huggingface.co/datasets/haiFrHust/VNJPTranslate)
 
-## 🚀 Models
+---
 
-We fine-tuned a Sailor-1.8B-based model using Unsloth-based QLoRa.
+## 📝 Báo Cáo <a name="bao-cao"></a>
+
+Để tìm hiểu chi tiết về phương pháp và quy trình, hãy đọc báo cáo trên arXiv nhé
+- **Báo cáo**: [Báo cáo VNJPTranslate](https://arxiv.org/abs/2504.00339)
+
+---
+
+## 🚀 Mô Hình <a name="mo-hinh"></a>
+
+- **Mô hình Cơ bản**: Xây dựng trên kiến trúc Qwen 2.5 và được tinh chỉnh bằng:
+  - Kỹ thuật Chain-of-Thought - CoT.
+  - Hai bộ dữ liệu bổ sung: phiên bản tiếng Việt của Alpaca và bộ dữ liệu câu hỏi - trả lời tiếng Nhật từ Hugging Face.
+  
+- Dưới đây là mô hình cơ bản, mô hình đạt điểm cao sẽ được cải tiến thêm trong thời gian tới!
+ + **Liên kết mô hình**: [Mô hình Cơ bản trên Hugging Face](https://huggingface.co/haiFrHust/VNJPTranslate_base)
+
+- **Hiệu suất mô hình tốt nhất**: Đạt BLEU **28,3** trên tập kiểm tra Tatoeba, vượt qua 20,3 của Opus-MT-Ja-Vi.
+
+Chúng tôi không ngừng cải tiến mô hình để đảm bảo chúng luôn nhẹ và hiệu quả cao.
+
+---
