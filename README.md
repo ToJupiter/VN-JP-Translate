@@ -2,10 +2,9 @@
 
 ## 🌟 Mục Lục
 1. [Tổng Quan](#tong-quan)
-2. [Thành Tựu Chính](#thanh-tuu-chinh)
-3. [Bộ Dữ Liệu](#bo-du-lieu)
-4. [Báo Cáo](#bao-cao)
-5. [Mô Hình](#mo-hinh)
+2. [Bộ Dữ Liệu](#bo-du-lieu)
+3. [Báo Cáo](#bao-cao)
+4. [Mô Hình](#mo-hinh)
 
 ---
 
